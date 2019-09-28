@@ -1,0 +1,45 @@
+<resources>
+
+    <!--actionbar高度-->
+    <dimen name="actionbar_height">45dp</dimen>
+
+
+    <!--基础文字大小-->
+    <dimen name="base_res_app_text_size">18sp</dimen>
+    <!--所有Toast文字大小-->
+    <dimen name="base_res_toast_text_size">25in</dimen>
+
+    <!-- 日期控件相关 -->
+    <dimen name="my_calendar_button_size">15dp</dimen>
+    <dimen name="my_calendar_padding">15dp</dimen>
+    <dimen name="my_calendar_week_padding_vertical">10dp</dimen>
+    <dimen name="my_calendar_day_padding_vertical">0dp</dimen>
+    <dimen name="my_calendar_day_size">35dp</dimen>
+
+
+    <dimen name="home_tab_height">49dp</dimen>
+    <dimen name="common_content_spacing">@dimen/qmui_content_spacing_horizontal</dimen>
+
+    <!-- ListView -->
+    <dimen name="list_divider_height">1px</dimen>
+    <dimen name="list_divider_height_negative">-1px</dimen>
+    <!-- Helper 系列界面 -->
+
+    <!-- ColorHelper 颜色工具 -->
+    <dimen name="colorHelper_square_length">46dp</dimen>
+    <dimen name="colorHelper_square_margin">23dp</dimen>
+    <dimen name="colorHelper_square_desc_marginTop">10dp</dimen>
+    <dimen name="colorHelper_column_marginBottom">35dp</dimen>
+
+    <!-- DeviceHelper 设备检测工具 -->
+    <dimen name="deviceHelper_column_marginBottom">30dp</dimen>
+
+    <!-- DrawableHelper Drawable 工具 -->
+    <dimen name="drawableHelper_column_marginBottom">35dp</dimen>
+    <dimen name="drawableHelper_item_marginHorizontal">20dp</dimen>
+    <dimen name="drawableHelper_common_shape_size">50dp</dimen>
+
+    <!-- Span Utils 各种 Span 工具 -->
+    <dimen name="spanUtils_column_marginBottom">35dp</dimen>
+    <dimen name="spanUtils_common_textSize">16sp</dimen>
+</resources>
