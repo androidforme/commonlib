@@ -18,6 +18,7 @@ import okhttp3.RequestBody;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 
 /**
@@ -54,6 +55,7 @@ public class RetrofitClient {
                     // 基础地址
                     .baseUrl(Urls.BASE_URL)
                     // JSON转换器
+                    .addConverterFactory(ScalarsConverterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
                     // RxJava2适配器
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
