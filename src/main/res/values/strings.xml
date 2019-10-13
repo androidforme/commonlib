@@ -34,4 +34,12 @@
     <string name="friday">周五</string>
     <string name="saturday">周六</string>
     <string name="sunday">周日</string>
+
+
+    <string name="app_name">ui</string>
+
+    <string name="prompt_empty">我去帮你找一下数据～</string>
+    <string name="prompt_error">哎，错误发生了!</string>
+    <string name="prompt_loading">加载中~</string>
+
 </resources>

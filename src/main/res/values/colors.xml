@@ -2,10 +2,13 @@
 <resources>
     <color name="colorBasePrimary">#242830</color>
     <color name="colorBasePrimaryDark">#FAC169</color>
-    <color name="colorBaseAccent">#FAC169</color>
+    <color name="colorBaseAccent">@android:color/holo_red_dark</color>
     <color name="appBaseBackground">#FAC169</color>
     <color name="dialogActivityBackground">#7F000000</color>
     <color name="baseButtonTextColor">#8A5433</color>
 
+    <!-- 字体主色 -->
+    <color name="textPrimary">#4e5864</color>
+    <color name="textSecond">#8d9ca9</color>
 
 </resources>

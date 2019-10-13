@@ -25,6 +25,9 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    dataBinding {
+        enabled = true
+    }
 
 }
 
@@ -34,7 +37,7 @@ dependencies {
     //引入AndroidX吧,替换掉support包
 //    api 'androidx.appcompat:appcompat:1.1.0'
 //    api 'androidx.constraintlayout:constraintlayout:1.1.3'
-//    api 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
     def lifecycle_version = "2.0.0"
     // ViewModel and LiveData
@@ -55,8 +58,6 @@ dependencies {
 
     // GSON
    // api 'com.google.code.gson:gson:2.8.0'
-
-
 
     //https://github.com/scwang90/SmartRefreshLayout
  //   api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'

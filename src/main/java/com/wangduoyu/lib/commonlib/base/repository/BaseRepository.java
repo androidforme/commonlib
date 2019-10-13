@@ -25,6 +25,8 @@ public abstract class BaseRepository<DB, T> {
 
     protected abstract T transFromDb(DB data);
 
+    public abstract boolean isDBDataEmpty(T data) ;
+
     /**
      * 通用获取数据接口
      *
@@ -36,22 +38,9 @@ public abstract class BaseRepository<DB, T> {
         getDataFromDao(param)
                 .map(this::transFromDb)//类型转换
                 .subscribeOn(Schedulers.from(AppExecutors.networkIO()))
-                .filter(t -> isDBDataNotEmpty(t))
+                .filter(t -> !isDBDataEmpty(t))
                 .switchIfEmpty(getDataFromNet(param))
                 .subscribe(to::postValue, onError);
     }
-
-    private boolean isDBDataNotEmpty(Object data) {
-        LogUtils.d(data);
-        return false ;
-
-//        LogUtils.d(data);
-//        if (data != null && data instanceof List) {
-//            return !((List) data).isEmpty();
-//        } else {
-//            return data != null;
-//        }
-    }
-
 
 }
