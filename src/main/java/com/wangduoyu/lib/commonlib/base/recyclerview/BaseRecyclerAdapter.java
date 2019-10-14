@@ -39,6 +39,10 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseRe
         notifyDataSetChanged();
     }
 
+    public List<T> getData(){
+        return mData;
+    }
+
     @Override
     public BaseRecyclerAdapter.BindingViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         final BaseRecyclerAdapter.BindingViewHolder holder = new BaseRecyclerAdapter.BindingViewHolder(inflate(parent,viewType));
