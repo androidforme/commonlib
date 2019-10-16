@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.wangduoyu.lib.commonlib.utils.LogUtils;
 
 import java.util.List;
+import java.util.Map;
 
 import io.reactivex.Single;
 import io.reactivex.functions.Consumer;
@@ -19,9 +20,9 @@ import io.reactivex.schedulers.Schedulers;
  */
 public abstract class BaseRepository<DB, T> {
 
-    public abstract Single<DB> getDataFromDao(QueryParam param);
+    public abstract Single<DB> getDataFromDao(Map param);
 
-    public abstract Single<T> getDataFromNet(QueryParam param);
+    public abstract Single<T> getDataFromNet(Map param);
 
     protected abstract T transFromDb(DB data);
 
@@ -34,7 +35,7 @@ public abstract class BaseRepository<DB, T> {
      * @param onError 异常事件
      * @param param   入口参数
      */
-    public void getData(MutableLiveData<T> to, Consumer<Throwable> onError, QueryParam param) {
+    public void getData(MutableLiveData<T> to, Consumer<Throwable> onError, Map param) {
         getDataFromDao(param)
                 .map(this::transFromDb)//类型转换
                 .subscribeOn(Schedulers.from(AppExecutors.networkIO()))
